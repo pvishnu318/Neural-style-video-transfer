@@ -1,0 +1,28 @@
+# environment / caches
+.venv/
+__pycache__/
+*.pyc
+
+# big or third-party material (reproducible from the scripts / downloaded from the original authors)
+data/
+weights/
+checkpoints/
+third_party/
+papers/
+
+# human-study clips + the answer key (publishing the key would spoil the study)
+results/human_study/
+
+# videos and scratch images
+*.mp4
+*.avi
+results/*_smoke.png
+results/eval_test_main_backup.json
+
+# console logs contain local file paths; the .jsonl / .json logs carry the same numbers
+logs/**/*.log
+logs/*.log
+STOP_AUTOPUSH
+
+# full-size qualitative PNGs stay local; compressed JPEG previews are published
+results/qualitative/

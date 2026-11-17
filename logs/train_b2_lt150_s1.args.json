@@ -1,0 +1,16 @@
+{
+ "mode": "b2",
+ "name": "b2_lt150_s1",
+ "lt": 150.0,
+ "lc": 1.0,
+ "ls": 10.0,
+ "steps": 2000,
+ "batch": 4,
+ "lr": 5e-05,
+ "crop": 256,
+ "clip_len": 3,
+ "workers": 4,
+ "seed": 1,
+ "log_every": 50,
+ "init": null
+}

@@ -1,0 +1,15 @@
+bike-packing
+car-roundabout
+cows
+dance-twirl
+dog
+dogs-jump
+drift-straight
+judo
+kite-surf
+loading
+mbike-trick
+paragliding-launch
+parkour
+scooter-black
+soapbox
