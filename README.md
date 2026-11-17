@@ -4,7 +4,7 @@ Arbitrary-style video stylisation (input: a content video + a style image). Base
 flow-warped temporal loss (B1) and test a small flow-free attention module (B2), and compare against post-hoc flow blending, the original
 per-style models of the earlier project, and (in our pipeline) the released ReReVST and MCCNet models.
 
-**Start here:** [`RESULTS.md`](RESULTS.md) (final test numbers and what they do / do not show), [`PROTOCOL.md`](PROTOCOL.md) (rules fixed before the
+**Start here:** [`ARCHITECTURE.md`](ARCHITECTURE.md) (how the method and the models work, with diagrams), [`RESULTS.md`](RESULTS.md) (final test numbers and what they do / do not show), [`PROTOCOL.md`](PROTOCOL.md) (rules fixed before the
 experiments + every later amendment), [`LITERATURE.md`](LITERATURE.md) (related work, with verification status per paper), [`HUMAN_STUDY.md`](HUMAN_STUDY.md).
 
 Status is tracked honestly in those files. The repository is updated automatically while work is in progress.
