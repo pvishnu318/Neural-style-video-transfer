@@ -7,7 +7,7 @@ per-style models of the earlier project, and (in our pipeline) the released ReRe
 **Start here:** [`RESULTS.md`](RESULTS.md) (final test numbers and what they do / do not show), [`PROTOCOL.md`](PROTOCOL.md) (rules fixed before the
 experiments + every later amendment), [`LITERATURE.md`](LITERATURE.md) (related work, with verification status per paper), [`HUMAN_STUDY.md`](HUMAN_STUDY.md).
 
-Status is tracked honestly in those files; results still being produced are marked as such.
+Status is tracked honestly in those files. The repository is updated automatically while work is in progress.
 
 ## Layout
 - `src/` code: `adain.py`, `flowutil.py` (RAFT, warping, occlusion masks), `metrics.py`, `evaluate.py`, `train.py`, `temporal_module.py` (B2), `external_methods.py` / `eval_external.py` (published models in our pipeline), `eval_old_models.py`, `make_report.py`

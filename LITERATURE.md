@@ -54,3 +54,10 @@ Pretrained model and code: https://github.com/daooshee/ReReVST-Code (GPL-3.0); w
 
 ## 4. Architectural idea we tried
 LocalAttnFusion (flow-free 7x7 local cross-frame attention + gate, 0.23M params): validation and test showed **no reproducible gain** over B1 (seed-to-seed sign flip, gate shrank to ~0.007). Reported as a negative/neutral result. Prior art already covers attention for style (AdaAttN) and flow-free video consistency (MCCNet, CCPL, ReReVST), so novelty claims should be modest.
+
+---
+## 5. Update after running published models in our pipeline (2026-11-17)
+* **ReReVST**: its paper is still not readable (IEEE), but the authors' *supplementary PDF* (from their Drive folder) confirms: trained on MS-COCO content + WikiArt styles with VGG-19 encoders; loss weights content 1, style 20, colour reconstruction 20, TV 10, temporal 60; Adam 1e-4, batch 4; relaxed style loss introduced in the second stage and temporal regularisation in the last epoch; benchmarking used 20 style images and the other methods' released code with default parameters; "temporal stability improves steadily with the increase of regularization strength" while content reconstruction degrades (the same trade-off we measure for B1). Metric definitions and the main tables remain unverified by me.
+* **Run through OUR protocol** (15 DAVIS test videos x 6 unseen styles): ReReVST warp error 0.00258 (5-frame 0.00672), content LPIPS 0.529, style distance 1.106, 171 ms/frame; MCCNet 0.00572 (0.01094), 0.533, 0.566, 61 ms/frame. See RESULTS.md section 6 for paired comparisons and caveats. ReReVST is smoother than anything we trained, with a much higher style distance on a metric that is tied to AdaIN's statistics.
+* **MCCNet's released `test_video.py` does not run** (calls `torch.uint8(...)` and `cv2.cvColor`, and its frame-processing branch `if j % 1 == False` never executes); we reimplemented its inference core. Its decoder/module weights are in the repo; its VGG file is byte-identical to the AdaIN VGG we use (sha256 checked).
+* Still unread: CCPL's supplementary material, AdaAttN, Ruder/Huang/Chen/Lai/ReCoNet experiment sections.

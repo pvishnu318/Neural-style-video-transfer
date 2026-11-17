@@ -93,3 +93,9 @@ The B2-B1 difference flips sign between seeds (-2.8% / +2.8%) -> it is seed nois
 Conclusion fixed before the test run: B2 (LocalAttnFusion) is NOT shown to improve on B1; its gate stays ~0.007-0.008. Report it as a negative/neutral result.
 
 ## FINAL test evaluation (run once): B0, B0+blend0.3/0.6, control, B1 lt150 (seeds 0,1), B1 lt500, B1 lt1500, B2 lt150 (seeds 0,1), with --timing. Script: run_test.sh.
+
+---
+## Addendum (2026-11-17, after the main test run; none of this changes any earlier number)
+* Extra comparison runs on the SAME test split, added after seeing the main results and disclosed as such: published ReReVST and MCCNet (default settings, no tuning, `src/eval_external.py`), the earlier project's per-style TransformerNet checkpoints (`src/eval_old_models.py`, each on its own style) with our methods on those same three showcase styles, and extra flow-blend strengths 0.1/0.2/0.45.
+* The three showcase styles (cuphead, mosaic, starry night) were used here for evaluation of the old per-style models only; no selection or tuning was based on them.
+* Speed was re-measured on an idle GPU (`src/time_methods.py`, `src/time_external.py`); the timings printed in the first test run were discarded (overnight sleep + one helper bug, found and fixed).

@@ -78,9 +78,9 @@ ax1.axvline(ref["warp_mse_k1"], color=MUT, lw=1, ls=(0, (4, 3)))
 draw(ax2, True); ax2.set_xlim(0.0038, 0.0112); ax2.set_ylim(0.225, 0.62); ax2.set_title("Zoom: where the fine-tuned models live", color=INK, fontsize=10.5, loc="left")
 h, l = ax1.get_legend_handles_labels(); seen = {}
 for hh, ll in zip(h, l): seen.setdefault(ll, hh)
-fig.legend(seen.values(), seen.keys(), loc="lower center", ncol=2, frameon=False, fontsize=8.5, labelcolor=INK)
+fig.legend(seen.values(), seen.keys(), loc="lower center", ncol=2, bbox_to_anchor=(0.5, 0.0), frameon=False, fontsize=8.5, labelcolor=INK)
 fig.suptitle("Smoothness vs style on 15 test videos x 6 unseen styles - lower-left is better", color=INK, fontsize=12, x=0.01, ha="left")
-fig.tight_layout(rect=(0, 0.1, 1, 0.95)); fig.savefig(R / "tradeoff_test.png", dpi=160, facecolor=BG); print("saved chart")
+fig.tight_layout(rect=(0, 0.2, 1, 0.95)); fig.savefig(R / "tradeoff_test.png", dpi=160, facecolor=BG); print("saved chart")
 
 
 # ---- old project's per-style models (own style) + our methods on the SAME three styles
