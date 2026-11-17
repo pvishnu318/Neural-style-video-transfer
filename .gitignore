@@ -6,7 +6,7 @@ __pycache__/
 # big or third-party material (reproducible from the scripts / downloaded from the original authors)
 data/
 weights/
-checkpoints/
+checkpoints/round1_480styles/
 third_party/
 papers/
 
